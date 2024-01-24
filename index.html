@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleverDevs Post Maker</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/html2canvas.js"></script>
+</head>
+<body>
+<img src="" id="myImage">
+<h1 id="pageTitle">
+    Creating Post For @CleverDevs
+</h1>
+
+
+<div id="preview">
+
+    <div id="innerBox">
+        <div id="watermark">
+            @CleverDevs
+        </div>
+
+        <p contenteditable="true" id="text">
+            CleverDevs
+        </p>
+    </div>
+</div>
+
+<div id="settings">
+    <div class="row">
+        <label for="widthInput">
+            Width
+        </label>
+        <input id="widthInput" value="512">
+        <label for="heightInput">
+            Height
+        </label>
+        <input id="heightInput" value="512">
+    </div>
+    <div class="row">
+        <label for="fontSelect">
+            font
+        </label>
+        <select id="fontSelect">
+            <option>iransans</option>
+            <option>vazir</option>
+        </select>
+    </div>
+    <div class="row">
+        <label for="bgCheck">
+            Do you want the background image ?
+        </label>
+        <input type="checkbox" id="bgCheck">
+
+    </div>
+    <div class="row" id="bgInputDiv">
+        <label for="bgInput">
+            Select Background
+        </label>
+        <input type="file" id="bgInput" accept="image/jpeg, image/png, image/jpg">
+    </div>
+
+    <div class="row">
+        <button id="exportBtn" class="btn btn-success">
+            Export
+        </button>
+    </div>
+</div>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
