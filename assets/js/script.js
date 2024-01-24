@@ -2,6 +2,7 @@ const preview = document.querySelector('#preview')
 const innerBox = document.querySelector('#innerBox')
 const widthInput = document.querySelector('#widthInput')
 const heightInput = document.querySelector('#heightInput')
+const textColorInput = document.querySelector('#textColorInput')
 const fontSelect = document.querySelector('#fontSelect')
 const bgCheck = document.querySelector('#bgCheck')
 const bgInputDiv = document.querySelector('#bgInputDiv')
@@ -15,14 +16,23 @@ widthInput.addEventListener('keyup', () => {
 heightInput.addEventListener('keyup', () => {
     preview.style.height = heightInput.value + "px";
 })
+textColorInput.addEventListener('change', ()=>{
+    text.style.color = textColorInput.value;
+})
 fontSelect.addEventListener('change', (e) => {
     text.style.fontFamily = e.target.value;
 })
 bgCheck.addEventListener('change', (e) => {
     if (e.target.checked) {
         bgInputDiv.style.display = "block"
+        if (bgInput.files[0] != null ){
+            let imgUrl = URL.createObjectURL(bgInput.files[0])
+            innerBox.style.background = "url("+imgUrl+")"
+        }
+
     } else {
         bgInputDiv.style.display = "none"
+        innerBox.style.background = "#fff"
     }
 
 })

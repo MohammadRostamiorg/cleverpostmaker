@@ -20,7 +20,7 @@ body {
     text-align: center;
 }
 
-#preview{
+#preview {
     width: 512px;
     height: 512px;
     background: #444A62;
@@ -29,7 +29,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-
+}
 
 #innerBox{
     background: #fff;
@@ -37,8 +37,10 @@ body {
     width: 90%;
     height: 90%;
     position: relative;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
 }
-}
+
 #watermark{
     min-width: 150px;
     width: 20%;
@@ -80,6 +82,9 @@ input , select {
     margin: 10px 0;
 }
 
+#textColorInput{
+    height: 50px;
+}
 .row#bgInputDiv{
     display: none;
 }
